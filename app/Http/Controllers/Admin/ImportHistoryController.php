@@ -19,7 +19,7 @@ class ImportHistoryController extends Controller
 
     public function downloadTemplate()
     {
-        $path = public_path('templates/MoPrint_Import_Template.xlsx');
+        $path = public_path('template/MoPrint_Import_Template.xlsx');
         if (file_exists($path)) {
             return response()->download($path, 'MoPrint_Import_Template.xlsx', [
                 'Content-Type' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
